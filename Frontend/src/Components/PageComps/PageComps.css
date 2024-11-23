@@ -1,18 +1,14 @@
 /* General Reset */
-body, html, div, h1, p, button {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 .landing-container {
+  font-family: 'Arial', sans-serif;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
+  gap: 5rem;
 }
 
 /* Header Section */
@@ -42,7 +38,7 @@ body, html, div, h1, p, button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s;
 }
 
 .landing-button:hover {
@@ -63,12 +59,25 @@ body, html, div, h1, p, button {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.first
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0px 19px;
+}
+
+@media (max-width:1000px) {
+     .first{
+      flex-direction: column;
+      gap: 3rem;
+      padding-top: 70px;
+     }
+     
+}
+
 /* Responsive Design */
 @media screen and (min-width: 768px) {
-  .landing-container {
-    flex-direction: row;
-    padding: 40px;
-  }
 
   .landing-header {
     text-align: left;
@@ -86,6 +95,65 @@ body, html, div, h1, p, button {
   .landing-image {
     max-width: 50%;
   }
+}
+
+
+.landing-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile-first */
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .landing-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+  }
+}
+
+/* Individual Div Styling */
+.landing-card {
+  background-color: #ffffff6f; /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 0.5rem; /* Rounded corners */
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.landing-card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.landing-card img {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+}
+
+.landing-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222222; /* Darker text for emphasis */
+}
+
+.landing-card p {
+  font-size: 0.875rem;
+  color: #666666; /* Medium gray text */
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.landing-card a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1d4ed8; /* Blue text */
+  text-decoration: underline;
+}
+
+.landing-card a:hover {
+  color: #2563eb; /* Slightly brighter blue on hover */
 }
 
 
@@ -174,5 +242,118 @@ body, html, div, h1, p, button {
 
   .grid-item {
     width: 150px;
+  }
+}
+
+
+
+
+/*Features*/
+.features-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 20px;
+}
+
+.features-heading {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 800px; /* Adjust width to fit content */
+  margin-top: 90px;
+}
+
+.feature-item {
+  background-color: #ffffff7e;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .features-heading {
+    font-size: 1.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr; /* Stack items on smaller screens */
+  }
+}
+
+
+
+/*Eduactional content*/
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh; /* Ensure the container takes at least full viewport height */
+  align-items: center; /* Center cards vertically if needed */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 22%; /* Adjust width for card size */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 400px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 48%; /* 2 cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* 1 card per row on very small screens */
   }
 }
