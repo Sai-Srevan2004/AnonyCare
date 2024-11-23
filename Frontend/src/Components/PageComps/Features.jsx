@@ -19,8 +19,8 @@ const Features = () => {
               <p>Engage with others instantly using chat or message boards.</p>
             </div>
             <div className="feature-item">
-              <h3>Peer-to-Peer and Expert Support</h3>
-              <p>Get help from both peers and experts for personalized guidance.</p>
+              <h3>Peer-to-Peer Support</h3>
+              <p>Get help from both peers for personalized guidance.</p>
             </div>
           </div>
         </div>

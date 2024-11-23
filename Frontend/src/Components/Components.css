@@ -5,10 +5,17 @@
     align-items: center;
     padding: 15px 20px;
     font-family: 'Arial', sans-serif;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #004d4d35;
+    height: 90px;
+    width: 100%;
+    background-color: #004d4d;
   }
+
   
   .navbar-logo h1 {
-    color: #004d4d;
+    color: whitesmoke;
     margin: 0;
     font-size: 1.8rem;
   }
@@ -27,28 +34,34 @@
     margin-left: 20px;
   }
   
+  .navbar-menu ul li{
+    color: whitesmoke;
+  }
+
   .navbar-menu a {
-    color: #004d4d;
+    color: whitesmoke;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
   }
   
   .navbar-menu a:hover {
-    color: #004d66; /* Darker blue for hover effect */
+    color: whitesmoke;
   }
   
   /* Login Button */
   .login-btn {
-    background-color: #004d66;
-    color: whitesmoke;
+    background-color:  whitesmoke;;
+    color:#004d66;
     padding: 8px 15px;
     text-decoration: none;
     border-radius: 5px;
     font-size: 1rem;
     margin-left: 20px;
     transition: background-color 0.3s ease;
-  }
+
+}
+
   
   .login-btn:hover {
     background-color: #003355;
@@ -66,7 +79,7 @@
     width: 25px;
     height: 3px;
 
-    background-color:#004d4d; 
+    background-color:whitesmoke; 
   }
   
   /* Mobile responsiveness */

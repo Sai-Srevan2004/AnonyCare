@@ -1,0 +1,213 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+  }
+  
+  /* Header Section */
+  .about-header {
+    text-align: center;
+    background-color: #2e3b4e;
+    color: white;
+    padding: 40px 20px;
+  }
+  
+  .about-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* About Section */
+  .about-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .about-text {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 20px;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+  }
+  
+  .about-image {
+    flex: 1;
+    max-width: 40%;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Features Section */
+  .features-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f2f8fb;
+  }
+  
+  .features-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .features-container-ab {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .feature-card {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 22%;
+  }
+  
+  .feature-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+  }
+  
+  /* Call to Action Section */
+  .call-to-action {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #2e3b4e;
+    color: white;
+  }
+  
+  .call-to-action h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .call-to-action p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .call-to-action button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .call-to-action button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .about-text {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  
+    .about-image {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  
+    .features-container-ab {
+      align-items: center;
+    }
+  
+    .feature-card {
+      width: 80%;
+      margin: 15px 0;
+    }
+  
+    .call-to-action button {
+      padding: 12px 40px;
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .about-header h1 {
+      font-size: 2rem;
+    }
+  
+    .about-header p {
+      font-size: 1rem;
+    }
+  
+    .about-text h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-text p {
+      font-size: 1rem;
+    }
+  
+    .features-section h2 {
+      font-size: 1.8rem;
+    }
+  
+    .feature-card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .feature-card p {
+      font-size: 0.9rem;
+    }
+  
+    .call-to-action h2 {
+      font-size: 2rem;
+    }
+  
+    .call-to-action p {
+      font-size: 1rem;
+    }
+  }
+  

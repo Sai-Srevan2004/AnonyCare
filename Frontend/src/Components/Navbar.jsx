@@ -17,12 +17,11 @@ const Navbar = () => {
 
             <div className="navbar-items">
                 <ul className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
-                    <Link to='/'><li>Home</li></Link>
-                    <Link to='/chat'><li>Chat</li></Link>
-                    <li><a href="#mission">Our Mission</a></li>
-                     <Link to='/about'><li>About</li></Link>
+                    <Link className='Link' to='/'><li>Home</li></Link>
+                    <Link className='Link' to='/chat'><li>Chat</li></Link>
+                     <Link className='Link' to='/about'><li>About</li></Link>
                 </ul>
-                <Link to='/login'><a className="login-btn">Login</a></Link>
+                <Link className='Link' to='/login'><p className="login-btn">Login</p></Link>
             </div>
 
             {/* Hamburger Icon for mobile screens */}

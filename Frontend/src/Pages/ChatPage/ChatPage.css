@@ -1,0 +1,126 @@
+.chat-page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    padding: 10px;
+  }
+  
+  .user-list {
+    width: 30%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  .status {
+    font-size: 0.9em;
+    color: #777;
+  }
+  
+  .status.online {
+    color: green;
+  }
+  
+  .status.offline {
+    color: red;
+  }
+  
+  .chat-area {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-header h3 {
+    margin: 0;
+  }
+  
+  .messages {
+    margin-top: 20px;
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+  }
+  
+  .message strong {
+    color: #007bff;
+  }
+  
+  .message-input {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .message-input input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .message-input button {
+    width: 15%;
+    padding: 10px;
+    background-color: #006666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .message-input button:hover {
+    background-color: #0066669a;
+  }
+  
+  .start-chat, .end-chat {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #006666;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .start-chat:hover, .end-chat:hover {
+    background-color: #00666693;
+  }
+  
+  .start-chat {
+    display: block;
+  }
+  
+  .end-chat {
+    display: block;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .chat-page {
+      flex-direction: column;
+    }
+  
+    .user-list {
+      width: 100%;
+      padding: 10px;
+      border-right: none;
+    }
+  
+    .chat-area {
+      width: 100%;
+    }
+  }
+  
