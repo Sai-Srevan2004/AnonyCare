@@ -5,6 +5,7 @@ import MissionSection from '../../Components/PageComps/MissionSection';
 import Features from '../../Components/PageComps/Features';
 import EducationalContent from '../../Components/PageComps/EducationalContent';
 import HowItWorks from '../../Components/PageComps/HowItWorks';
+import ShareExperience from '../../Components/PageComps/ShareExperience';
 
 const HomePage = () => {
    return (
@@ -14,6 +15,7 @@ const HomePage = () => {
      <Features/>
      <EducationalContent/>
      <HowItWorks/>
+     <ShareExperience/>
     </>
   );
 }

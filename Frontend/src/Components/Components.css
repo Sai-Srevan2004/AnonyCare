@@ -29,24 +29,10 @@
     display: flex;
     list-style: none;
   }
-  
-  .navbar-menu li {
-    margin-left: 20px;
-  }
-  
-  .navbar-menu ul li{
-    color: whitesmoke;
-  }
 
-  .navbar-menu a {
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-menu a:hover {
-    color: whitesmoke;
+  .navbar-menu li{
+    margin-right: 10px;
+    margin-left: 10px;
   }
   
   /* Login Button */

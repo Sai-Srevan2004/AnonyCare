@@ -1,5 +1,10 @@
 import React from 'react';
 import './PageComps.css';
+import { Link } from 'react-router-dom';
+import { ImUsers } from "react-icons/im";
+import { MdAutoStories } from "react-icons/md";
+import { TbMoodHappyFilled } from "react-icons/tb";
+
 
 const LandingPage = () => {
   return (
@@ -26,23 +31,23 @@ const LandingPage = () => {
       <div className="landing-grid">
         {/* Resources Div */}
         <div className="landing-card">
-          <img src="resources-icon.png" alt="Resources" />
-          <h3>Resources</h3>
-          <p>Explore guides, exercises, and tips for better mental health.</p>
-          <a href="#resources">Learn More</a>
+        <TbMoodHappyFilled />
+          <h3>Mood Tracking</h3>
+          <p>Track your mood by giving daily mood</p>
+          <Link to="/trackmood">Track Mood</Link>
         </div>
 
         {/* Success Stories Div */}
         <div className="landing-card">
-          <img src="stories-icon.png" alt="Success Stories" />
+        <MdAutoStories />
           <h3>Success Stories</h3>
           <p>Read inspiring anonymous testimonials from our community.</p>
-          <a href="#stories">Read Stories</a>
+          <Link to='/stories'>Read Stories</Link>
         </div>
 
         {/* Community Div */}
         <div className="landing-card">
-          <img src="community-icon.png" alt="Community" />
+        <ImUsers />
           <h3>No of users</h3>
           <p>1000+</p>
 

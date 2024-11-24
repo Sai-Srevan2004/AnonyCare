@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Components.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -17,11 +17,11 @@ const Navbar = () => {
 
             <div className="navbar-items">
                 <ul className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
-                    <Link className='Link' to='/'><li>Home</li></Link>
-                    <Link className='Link' to='/chat'><li>Chat</li></Link>
-                     <Link className='Link' to='/about'><li>About</li></Link>
+                    <NavLink className='Link' to='/'><li>Home</li></NavLink>
+                    <NavLink className='Link' to='/chat'><li>Chat</li></NavLink>
+                     <NavLink className='Link' to='/about'><li>About</li></NavLink>
                 </ul>
-                <Link className='Link' to='/login'><p className="login-btn">Login</p></Link>
+                <NavLink className='Link' to='/login'><p className="login-btn">Login</p></NavLink>
             </div>
 
             {/* Hamburger Icon for mobile screens */}
