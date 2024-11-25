@@ -86,7 +86,7 @@ const signUp = async (req, res) => {
         // Fetch data from req.body
         const {email, password, cpassword ,otp } = req.body;
        
-        console.log( email, password, cpassword, otp);
+        console.log("all:", email, password, cpassword, otp);
         
         // Validate data
         if ( !email || !password || !cpassword || !otp) {

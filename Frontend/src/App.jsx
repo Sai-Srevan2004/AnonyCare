@@ -8,6 +8,7 @@ import ChatPage from './Pages/ChatPage/ChatPage'
 import AboutUsPage from './Pages/AboutPage/AboutUsPage'
 import StoriesPage from './Pages/StoriesPage/StoriesPage'
 import TrackMoodPage from './Pages/TrackMoodPage/TrackMoodPage'
+import PrivateRoute from './Components/PrivateRoute'
 
 const router = createBrowserRouter([
   {
@@ -17,10 +18,10 @@ const router = createBrowserRouter([
       { path: '/', element: <HomePage /> },
       {path:'/login',element:<LoginPage/>},
       {path:'/signup',element:<SignUpPage/>},
-      {path:'/chat',element:<ChatPage/>},
+      {path:'/chat',element:<PrivateRoute><ChatPage/></PrivateRoute>},
       {path:'/about',element:<AboutUsPage/>},
       {path:'/stories',element:<StoriesPage/>},
-      {path:'/trackmood',element:<TrackMoodPage/>}
+      {path:'/trackmood',element:<PrivateRoute><TrackMoodPage/></PrivateRoute>}
     ],
   },
 ])

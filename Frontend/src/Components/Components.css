@@ -194,3 +194,79 @@
     }
   }
   
+
+  /*OTP css*/
+  .otp-form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+  }
+  
+  .otp-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .otp-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .otp-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .otp-submit-btn,
+  .otp-resend-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .otp-submit-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .otp-resend-btn {
+    background-color: #008cba;
+    color: white;
+  }
+  
+  .otp-submit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .otp-resend-btn:hover {
+    background-color: #005f7f;
+  }
+  
+  @media (max-width: 500px) {
+    .otp-buttons {
+      flex-direction: column;
+    }
+  
+    .otp-submit-btn,
+    .otp-resend-btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .otp-submit-btn:last-child {
+      margin-bottom: 0;
+    }
+  }
+  

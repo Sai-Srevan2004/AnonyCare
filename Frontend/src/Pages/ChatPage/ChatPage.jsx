@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './ChatPage.css';
 
+
 const users = [
   { id: 1, name: 'User1', status: 'offline' },
   { id: 2, name: 'User2', status: 'offline' },
@@ -9,6 +10,7 @@ const users = [
 ];
 
 const ChatPage = () => {
+
   const [selectedUser, setSelectedUser] = useState(null);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [messages, setMessages] = useState([]);

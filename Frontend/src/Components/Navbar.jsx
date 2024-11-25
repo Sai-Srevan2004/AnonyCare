@@ -1,12 +1,28 @@
 import React, { useState } from 'react';
 import './Components.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink ,Link} from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Logout } from '../Slices/authSlice';
+
+
 
 const Navbar = () => {
+    
+
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
+    };
+
+    const token = useSelector((state) => state.auth.token); // Get token from Redux
+    const dispatch = useDispatch();
+  
+    
+    const handleLogout = () => {
+      dispatch(Logout(null)); // Call the logout action
+      localStorage.removeItem('anonytoken'); // Remove token from localStorage
+      alert("logged out");
     };
 
     return (
@@ -21,7 +37,10 @@ const Navbar = () => {
                     <NavLink className='Link' to='/chat'><li>Chat</li></NavLink>
                      <NavLink className='Link' to='/about'><li>About</li></NavLink>
                 </ul>
-                <NavLink className='Link' to='/login'><p className="login-btn">Login</p></NavLink>
+                {
+                    token?<p onClick={handleLogout} className='login-btn'>Logout</p>:<Link className='Link' to='/login'><p className="login-btn">Login</p></Link>
+
+                }
             </div>
 
             {/* Hamburger Icon for mobile screens */}
