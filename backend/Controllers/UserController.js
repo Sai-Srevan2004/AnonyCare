@@ -213,6 +213,7 @@ const login = async (req, res) => {
 
 
      } catch (error) {
+        console.log(error.message)
         return res.json({
             success:false,
             message:"Login failed! please try Again later!"
@@ -220,86 +221,19 @@ const login = async (req, res) => {
      }
 }
 
+//get otherusers
 
-const getAllUserDetails = async (req, res) => {
-    console.log("user",req.user)
-
+const getOtherUsers = async (req, res) => {
     try {
-        //get id
-        const id = req.user.id;
-
-
-        //validation and get user details
-        const userDetails = await User.findById(id)
-        //return response
-        return res.json({
-            success:true,
-            message:'User Data Fetched Successfully',
-            userDetails
-        });
-       
-    }
-    catch(error) {
-        return res.json({
-            success:false,
-            message:error.message,
-        });
+        const loggedInUserId = req.user.id;
+        const otherUsers = await User.find({ _id: { $ne: loggedInUserId } }).select("-password");
+        return res.json(otherUsers);
+    } catch (error) {
+        console.log(error);
     }
 }
 
-//   const updateReview = async (req, res) => {
-//     try {
-//       const { rating, review } = req.body;
-  
-//       // Validate input
-//       if (!rating || !review) {
-//         return res.json({ message: 'Rating and review are required.' });
-//       }
-  
-//       // Check if the user already has a review
-//       const existingReview = await Review.findOne({ userId: req.user.id });
-  
-//       if (existingReview) {
-//         // If the user already has a review, update it
-//         existingReview.rating = rating;
-//         existingReview.review = review;
-  
-//         const updatedReview = await existingReview.save(); // Save the updated review
-//         return res.json({ message: 'Review updated successfully.', review: updatedReview });
-//       } else {
-//         // If no review exists, create a new one
-//         const newReview = new Review({
-//           userId: req.user.id, // User ID from the token
-//           rating,
-//           review,
-//         });
-  
-//         const savedReview = await newReview.save(); // Save the new review
-//         return res.json({ message: 'Review added successfully.', review: savedReview });
-//       }
-//     } catch (error) {
-//       console.error('Error adding or updating review:', error);
-//       res.json({ message: 'Failed to add or update review.' });
-//     }
-//   };
-  
-
-
-//   const getAllReviews = async (req, res) => {
-//     try {
-//       // Fetch reviews and populate userId, but exclude the password field
-//       const allReviews = await Review.find()
-//         .populate('userId', 'username email image')  // Include username, email, and image
-//         .exec();  // Use exec() to execute the query
-      
-//       // Respond with reviews
-//       res.json({ reviews: allReviews });
-//     } catch (error) {
-//       console.error('Error fetching all reviews:', error);
-//       res.status(500).json({ message: 'Failed to fetch all reviews.' });  // Return 500 error on failure
-//     }
-//   };
 
   
 
-module.exports = { sendOtp, signUp, login,getAllUserDetails}
+module.exports = { sendOtp, signUp, login,getOtherUsers}

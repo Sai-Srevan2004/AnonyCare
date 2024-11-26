@@ -3,8 +3,9 @@ import './Components.css';
 import { NavLink ,Link} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Logout } from '../Slices/authSlice';
+import { setAuthUser, setOtherUsers, setSelectedUser } from '../Slices/authSlice';
 
-
+import { setMessages } from '../Slices/messageSlice';
 
 const Navbar = () => {
     
@@ -19,9 +20,14 @@ const Navbar = () => {
     const dispatch = useDispatch();
   
     
-    const handleLogout = () => {
+    const handleLogout = async() => {
       dispatch(Logout(null)); // Call the logout action
       localStorage.removeItem('anonytoken'); // Remove token from localStorage
+                dispatch(setAuthUser(null));
+                dispatch(setMessages(null));
+                dispatch(setOtherUsers(null));
+                dispatch(setSelectedUser(null));
+        
       alert("logged out");
     };
 

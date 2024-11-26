@@ -1,0 +1,325 @@
+/*Messages css*/
+.chat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.chat-end {
+    align-items: flex-end;
+    background-color: #10b981;
+}
+
+.chat-start {
+    align-items: flex-start;
+    background-color: #3b82f6;
+}
+
+.chat-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.avatar-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chat-header {
+    margin-bottom: 0.3rem;
+}
+
+.chat-time {
+    font-size: 0.75rem;
+    opacity: 0.5;
+    color: white;
+}
+
+.chat-bubble {
+    padding: 0.75rem 1rem;
+    border-radius: 20px;
+    background-color: #3b82f6; /* Tailwind 'blue-500' */
+    color: white;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.chat-bubble-other {
+    background-color: #e5e7eb; /* Tailwind 'gray-200' */
+    color: black;
+}
+
+
+/*MessageContainer css*/
+
+.message-container {
+    min-width: 550px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-header {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background-color: #18181b; /* Tailwind 'zinc-800' */
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.avatar {
+    position: relative;
+}
+
+.avatar-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.online::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #10b981; /* Tailwind 'green-500' */
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.welcome-container {
+    min-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome-heading {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.welcome-subheading {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/*Messages css*/
+
+.messages-container {
+    padding: 1rem; /* Tailwind 'px-4' */
+    flex: 1; /* Tailwind 'flex-1' */
+    overflow-y: auto; /* Tailwind 'overflow-auto' */
+    display: flex;
+    flex-direction: column;
+}
+
+/*OtherUser css*/
+.user-item {
+    display: flex;
+    gap: 0.5rem; /* Tailwind 'gap-2' */
+    align-items: center; /* Tailwind 'items-center' */
+    background-color: transparent;
+    color: white;
+    padding: 0.5rem; /* Tailwind 'p-2' */
+    border-radius: 0.25rem; /* Tailwind 'rounded' */
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.user-item:hover {
+    background-color: #e4e4e7; /* Tailwind 'zinc-200' */
+    color: black;
+}
+
+.user-item-selected {
+    background-color: #e4e4e7; /* Tailwind 'zinc-200' */
+    color: black;
+}
+
+.avatar {
+    position: relative;
+}
+
+.avatar-wrapper {
+    width: 48px; /* Tailwind 'w-12' */
+    height: 48px;
+    border-radius: 50%; /* Tailwind 'rounded-full' */
+    overflow: hidden;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.online::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #10b981; /* Tailwind 'green-500' */
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column; /* Tailwind 'flex-col' */
+    flex: 1; /* Tailwind 'flex-1' */
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between; /* Tailwind 'justify-between' */
+    gap: 0.5rem; /* Tailwind 'gap-2' */
+}
+
+.divider {
+    height: 1px; /* Tailwind 'h-1' */
+    background-color: #d4d4d8; /* Tailwind 'zinc-400' */
+    margin: 0; /* Tailwind 'my-0' */
+    padding: 0; /* Tailwind 'py-0' */
+}
+
+/*OtherUsers css*/
+.other-users-container {
+    overflow-y: auto; /* Tailwind 'overflow-auto' */
+    flex: 1; /* Tailwind 'flex-1' */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*SendInput css*/
+.send-input-container {
+    padding: 12px 16px; /* Tailwind 'px-4 my-3' */
+}
+
+.send-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.send-input {
+    width: 100%;
+    padding: 12px 16px; /* Tailwind 'p-3' */
+    font-size: 14px; /* Tailwind 'text-sm' */
+    border-radius: 8px; /* Tailwind 'rounded-lg' */
+    background-color: #2d2d2d; /* Tailwind 'bg-gray-600' */
+    color: #fff;
+    border: 1px solid #4a4a4a; /* Tailwind 'border-zinc-500' */
+}
+
+.send-button {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/*sidebar css*/
+.sidebar-container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #6B7280; /* Tailwind 'border-slate-500' */
+}
+
+.search-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.search-input {
+    padding: 12px 16px; /* Equivalent to 'input input-bordered rounded-md' */
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #D1D5DB; /* Tailwind 'border' */
+    background-color: #F3F4F6; /* Tailwind 'input-bordered' */
+    color: #374151; /* Tailwind 'text-gray-800' */
+    width: 100%;
+}
+
+.search-button {
+    padding: 8px 12px;
+    background-color: #4B5563; /* Tailwind 'bg-zinc-700' */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.divider {
+    margin: 16px 0;
+    padding: 0;
+    height: 1px;
+    background-color: #E5E7EB; /* Tailwind 'divider' color */
+}
+
+.logout-container {
+    margin-top: 16px;
+}
+
+.logout-button {
+    padding: 8px 16px;
+    background-color: #EF4444; /* Tailwind 'bg-red-500' */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}

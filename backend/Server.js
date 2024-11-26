@@ -4,22 +4,25 @@ require('dotenv').config();
 const cors=require('cors');
 
 const UserRoutes=require('./Routes/UserRoutes')
+const MessageRoutes=require('./Routes/messageRoutes')
 
 
 const app=express();
 
 const PORT=process.env.PORT || 2000;
 
+//db function calling
+db();
 
 //middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin:"*"
+}));
 app.use("/api/users",UserRoutes);
-
-
-//db function calling
-db();
+app.use("/api/message",MessageRoutes)
 
 app.listen(PORT,()=>{
     console.log("Server running at port:",PORT);
 })
+
