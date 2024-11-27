@@ -6,6 +6,7 @@ import Features from '../../Components/PageComps/Features';
 import EducationalContent from '../../Components/PageComps/EducationalContent';
 import HowItWorks from '../../Components/PageComps/HowItWorks';
 import ShareExperience from '../../Components/PageComps/ShareExperience';
+import Footer from '../../Components/Footer'
 
 const HomePage = () => {
    return (
@@ -16,6 +17,7 @@ const HomePage = () => {
      <EducationalContent/>
      <HowItWorks/>
      <ShareExperience/>
+     <Footer></Footer>
     </>
   );
 }

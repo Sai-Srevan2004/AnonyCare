@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useEffect,useState} from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import AppLayout from './AppLayout/AppLayout'
 import HomePage from './Pages/HomePage/HomePage'
@@ -9,6 +9,11 @@ import AboutUsPage from './Pages/AboutPage/AboutUsPage'
 import StoriesPage from './Pages/StoriesPage/StoriesPage'
 import TrackMoodPage from './Pages/TrackMoodPage/TrackMoodPage'
 import PrivateRoute from './Components/PrivateRoute'
+import io from "socket.io-client";
+import {useSelector,useDispatch} from "react-redux";
+import { setSocket } from './Slices/socketSlice';
+import { setOnlineUsers } from './Slices/authSlice';
+import { BASE_URL } from './Apis/BackendBaseURL'
 
 const router = createBrowserRouter([
   {
@@ -27,7 +32,35 @@ const router = createBrowserRouter([
 ])
 
 const App = () => {
+
+  const {authUser} = useSelector(store=>store.auth);
+  const {socket} = useSelector(store=>store.socket);
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    if(authUser){
+      const socketio = io(`${BASE_URL}`, {
+          query:{
+            userId:authUser
+          }
+      });
+      dispatch(setSocket(socketio));
+
+      socketio?.on('getOnlineUsers', (onlineUsers)=>{
+        dispatch(setOnlineUsers(onlineUsers))
+      });
+      return () => socketio.close();
+    }else{
+      if(socket){
+        socket.close();
+        dispatch(setSocket(null));
+      }
+    }
+
+  },[authUser]);
+
   return <RouterProvider router={router} />
 }
 
 export default App
+

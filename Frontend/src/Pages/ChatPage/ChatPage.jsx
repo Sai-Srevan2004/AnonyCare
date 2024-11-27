@@ -1,10 +1,11 @@
 import React from 'react'
 import Sidebar from '../../Components/chatPageComponents/Sidebar'
 import MessageContainer from '../../Components/chatPageComponents/MessageContainer'
+import './ChatPage.css'
 
 const ChatPage = () => {
   return (
-    <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'20px'}}>
+    <div className='chatpageee'>
       <Sidebar />
       <MessageContainer />
     </div>

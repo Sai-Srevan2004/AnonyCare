@@ -18,18 +18,12 @@ const OtherUser = ({ user }) => {
                 onClick={() => selectedUserHandler(user)}
                 className={`user-item ${selectedUser?._id === user?._id ? 'user-item-selected' : ''}`}
             >
-                <div className={`avatar ${isOnline ? 'online' : ''}`}>
-                    <div className='avatar-wrapper'>
-                        img
-                    </div>
-                </div>
-                <div className='user-details'>
-                    <div className='user-info'>
+                <div  className={`avatar ${isOnline ? 'online' : ''}`}>
+                   
                         <p>{user?._id}</p>
-                    </div>
+                
                 </div>
             </div>
-            <div className='divider'></div>
         </>
     );
 };

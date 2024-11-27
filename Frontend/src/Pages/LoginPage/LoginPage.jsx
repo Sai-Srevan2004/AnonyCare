@@ -6,6 +6,7 @@ import axios from 'axios'
 import {useDispatch} from 'react-redux'
 import { setToken } from '../../Slices/authSlice';
 import { useNavigate } from 'react-router-dom';
+import { setAuthUser } from '../../Slices/authSlice';
 
 const LoginForm = () => {
 
@@ -22,8 +23,10 @@ const LoginForm = () => {
         try {
             const response=await axios.post(BASE_URL+'/api/users/login',{email,password});
             if(response.data.success)
-            {
+            {   
+                console.log(".....",response.data.data._id)
                 dispatch(setToken(response.data.token))
+                dispatch(setAuthUser(response.data.data._id))
                 localStorage.setItem('anonytoken', JSON.stringify(response.data.token));
                 alert("logged in succesfully!")
                 navigate('/')

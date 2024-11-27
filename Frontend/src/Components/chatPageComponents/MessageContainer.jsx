@@ -12,21 +12,11 @@ const MessageContainer = () => {
     return (
         <>
             {selectedUser !== null ? (
-                <div className='message-container'>
-                    <div className='user-header'>
-                        <div className={`avatar ${isOnline ? 'online' : ''}`}>
-                            <div className='avatar-wrapper'>
-                                <p>{selectedUser?._id}</p>
-                            </div>
-                        </div>
-                        <div className='user-details'>
-                            <div className='user-info'>
-                                <p>{selectedUser?._id}</p>
-                            </div>
-                        </div>
-                    </div>
+                <div className='zzz' >
+                  <div className='messagee-container'>
                     <Messages />
-                    <SendInput />
+                   </div>
+                   <SendInput />
                 </div>
             ) : (
                 <div className='welcome-container'>

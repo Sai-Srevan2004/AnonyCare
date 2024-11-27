@@ -10,28 +10,27 @@ const Message = ({ message }) => {
         scroll.current?.scrollIntoView({ behavior: "smooth" });
     }, [message]);
 
-    console.log(message,"....",authUser)
 
     return (
         <div 
             ref={scroll} 
-            className={`chat ${message?.senderId === authUser?._id ? 'chat-end' : 'chat-start'}`}
+            className={`chat ${message?.senderId === authUser ? 'chat-end' : 'chat-start'}`}
         >
-            <div className="chat-image avatar">
-                <div className="avatar-wrapper">
+            <div className='you-anony'>
+               
                     <p> {
-                            message?.senderId === authUser?._id 
-                                ? authUser?._id  
-                                : selectedUser?._id
+                            message?.senderId === authUser 
+                                ? "You"  
+                                : "Anony"
                         } 
                     </p>
-                </div>
+                
             </div>
             <div className="chat-header">
-                <time className="chat-time">12:45</time>
+                <time className="chat-time">{new Date(Date.now()).toISOString().split('T')[0]}</time>
             </div>
             <div 
-                className={`chat-bubble ${message?.senderId !== authUser?._id ? 'chat-bubble-other' : ''}`}
+                className={`chat-bubble ${message?.senderId !== authUser ? 'chat-bubble-other' : ''}`}
             >
                 {message?.message}
             </div>
