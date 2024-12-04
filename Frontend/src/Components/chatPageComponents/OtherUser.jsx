@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedUser } from '../../Slices/authSlice';
 import './css.css';
+import { ImUser } from "react-icons/im";
 
 const OtherUser = ({ user }) => {
     const dispatch = useDispatch();
@@ -20,6 +21,9 @@ const OtherUser = ({ user }) => {
             >
                 <div  className={`avatar ${isOnline ? 'online' : ''}`}>
                    
+
+
+                         <span><ImUser/></span>
                         <p>{user?._id}</p>
                 
                 </div>

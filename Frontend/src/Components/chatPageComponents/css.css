@@ -32,9 +32,10 @@
 .chat-bubble {
     padding: 0.75rem 1rem;
     border-radius: 20px;
-    background-color: #3b82f6; /* Tailwind 'blue-500' */
+    background-color: #004d4da8; /* Tailwind 'blue-500' */
     max-width: 70%;
     word-wrap: break-word;
+    color: whitesmoke;
 }
 
 .chat-bubble-other {
@@ -50,10 +51,10 @@
    overflow: auto;
    border-radius: 5px;
    height: 75vh;
-   background-image: url(https://daffy.ghost.io/content/images/2023/03/17.png);
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
+  background-color: #b3e6f2;
+  
+}::-webkit-scrollbar{
+  visibility: hidden;
 }
 
 .user-header {
@@ -146,29 +147,26 @@
 }
 
 /*OtherUser css*/
-.user-item {
+
+.avatar{
+    background-color:#004d4d72;
+    border-radius: 2px;
     display: flex;
-    gap: 0.5rem; /* Tailwind 'gap-2' */
-    align-items: center; /* Tailwind 'items-center' */
-    background-color: silver;
-    color: white;
-    padding: 0.5rem; /* Tailwind 'p-2' */
-    border-radius: 0.25rem; /* Tailwind 'rounded' */
+    align-items: center;
+    justify-content: flex-start;
+    gap:3rem;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.user-item:hover {
-    background-color: #e4e4e7; /* Tailwind 'zinc-200' */
-    color: black;
-}
-
-.user-item-selected {
-    background-color: #e4e4e7; /* Tailwind 'zinc-200' */
-    color: black;
-}
-
-.avatar {
+.avatar span{
+    font-size: 2rem;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     text-align: center;
 }
 
@@ -201,13 +199,6 @@
     display: flex;
     flex-direction: column; /* Tailwind 'flex-col' */
     flex: 1; /* Tailwind 'flex-1' */
-}
-
-.divider {
-    height: 1px; /* Tailwind 'h-1' */
-    background-color: #d4d4d8; /* Tailwind 'zinc-400' */
-    margin: 0; /* Tailwind 'my-0' */
-    padding: 0; /* Tailwind 'py-0' */
 }
 
 /*OtherUsers css*/
@@ -254,7 +245,8 @@
 
 /*sidebar css*/
 .sidebar-container {
-   background-color: whitesmoke;
+   background-color: #b3e6f2;
+   backdrop-filter: blur(30px);
    height: 85vh;
    width: 35%;
    border-radius: 5px;
