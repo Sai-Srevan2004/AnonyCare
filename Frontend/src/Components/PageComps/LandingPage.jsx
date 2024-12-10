@@ -20,7 +20,8 @@ const LandingPage = () => {
       </header>
       <div className="landing-image">
         <img
-          src="https://via.placeholder.com/500x300"
+  
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgyASKAoOwcNQrfocOkcCbVmt0q8oacq6nVg&s"
           alt="Mental Health Support"
           className="landing-img"
         />

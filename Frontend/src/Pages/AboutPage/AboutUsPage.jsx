@@ -17,7 +17,7 @@ const AboutUsPage = () => {
           </p>
         </div>
         <div className="about-image">
-          <img src="https://via.placeholder.com/600x400" alt="Mental health support" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTjBsRZxC8jX7Y19k3L087No1aWgcUFo5Y_w&s" alt="Mental health support" />
         </div>
       </section>
 

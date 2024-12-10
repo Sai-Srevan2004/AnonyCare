@@ -16,7 +16,7 @@ const MissionSection = () => {
       <div className="mission-grid">
         <div className="grid-item">
           <img
-            src="https://via.placeholder.com/150"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw3v37KXY6zN2aze3ysvBkpDZ6hdeRYgWydNa_lD4iWJXNU8OjVGMDZrLURK3JFduUjUg&usqp=CAU"
             alt="Mission 1"
             className="grid-img"
           />
@@ -24,7 +24,7 @@ const MissionSection = () => {
         </div>
         <div className="grid-item">
           <img
-            src="https://via.placeholder.com/150"
+            src="https://img.freepik.com/free-vector/hand-drawn-flat-design-connecting-people-infographic_52683-76904.jpg"
             alt="Mission 2"
             className="grid-img"
           />
@@ -32,7 +32,7 @@ const MissionSection = () => {
         </div>
         <div className="grid-item">
           <img
-            src="https://via.placeholder.com/150"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY9CCKIpgpgqcQH52M_bLSsHSqMY9gsbfUhQ&s"
             alt="Mission 3"
             className="grid-img"
           />
@@ -40,7 +40,7 @@ const MissionSection = () => {
         </div>
         <div className="grid-item">
           <img
-            src="https://via.placeholder.com/150"
+            src="https://cdn.shopify.com/s/files/1/0065/3990/3094/files/Meriwool-Layers-Social-10-6-20-Draft-1_1024x1024.gif?v=1601659451"
             alt="Mission 4"
             className="grid-img"
           />
