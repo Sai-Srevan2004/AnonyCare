@@ -16,11 +16,13 @@ const LandingPage = () => {
         <p className="landing-subtitle">
           Find a safe space to share your thoughts, connect anonymously, and seek support for your mental well-being.
         </p>
-        <button className="landing-button">Get Started</button>
+        <Link to='/chat'>        <button className="landing-button">Get Started</button>
+
+        </Link>
       </header>
       <div className="landing-image">
-        <img
-          src="https://via.placeholder.com/500x300"
+        <img 
+          src="https://meded.ucsf.edu/sites/meded.ucsf.edu/files/inline-images/mental%20health%20page.jpg"
           alt="Mental Health Support"
           className="landing-img"
         />

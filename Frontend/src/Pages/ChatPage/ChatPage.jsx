@@ -6,7 +6,7 @@ const users = [
   { id: 1, name: 'User1', status: 'offline' },
   { id: 2, name: 'User2', status: 'offline' },
   { id: 3, name: 'User3', status: 'offline' },
-  { id: 4, name: 'User4', status: 'offline' },
+  { id: 4, name: 'User4', status: 'online' },
 ];
 
 const ChatPage = () => {

@@ -96,7 +96,8 @@
   }
 
   .landing-image {
-    max-width: 50%;
+    min-width: 500px;
+    height: 300px;
   }
 }
 
@@ -212,7 +213,8 @@
 
 .grid-img {
   width: 100%;
-  height: auto;
+
+  height: 170px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
